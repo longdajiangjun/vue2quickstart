@@ -5,8 +5,16 @@ import VueRouter from 'vue-router'
 import App from './App'
 import routes from './routers'
 import store from './store/store'
+// import {Checkbox} from 'element-ui'
+// Vue.component(Checkbox.name, Checkbox);
+
+import Element from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+
+Vue.use(Element);
 
 Vue.use(VueRouter);
+
 let router = new VueRouter({ routes });
 
 
