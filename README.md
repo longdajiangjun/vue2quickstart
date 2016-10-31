@@ -1,6 +1,6 @@
 # v2test
 
-> vue2
+> vue2 element-ui route vuex, XMLHttpRequest
 
 ## Build Setup
 

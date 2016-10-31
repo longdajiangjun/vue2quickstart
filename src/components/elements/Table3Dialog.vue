@@ -6,31 +6,32 @@
     style="width: 100%">
     <el-table-column
       type="selection"
-      width="50">
+      width="10">
     </el-table-column>
     <el-table-column
       type="index"
-      width="50">
+      width="10">
     </el-table-column>
     <el-table-column
-      property="date"
-      label="日期"
-      width="120">
+      property="difficulty"
+      label="难度"
+      width="10">
     </el-table-column>
     <el-table-column
-      property="name"
-      label="姓名"
-      width="120">
+      property="descript"
+      label="知识点"
+      width="220">
     </el-table-column>
     <el-table-column
-      property="address"
-      label="地址">
+      property="amount"
+      label="题量">
     </el-table-column>
   </el-table>
 </template>
 
 <script type="text/ecmascript-6">
   import {Table, TableColumn, Tooltip, Checkbox} from 'element-ui'
+  import equationService from '../../api/equationService'
 
   export default {
 
@@ -41,23 +42,9 @@
       }
     },
     mounted(){
-      this.tableData = [{
-        date: '2016-05-02',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2016-05-04',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1517 弄'
-      }, {
-        date: '2016-05-01',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1519 弄'
-      }, {
-        date: '2016-05-03',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1516 弄'
-      }]
+      this.$nextTick(() => {
+        equationService.queryByTFCode("RJXX02011901").then(tableData => this.tableData = tableData);
+      });
     },
     methods: {
       handleSelectionChange(val) {
