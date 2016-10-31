@@ -43,7 +43,7 @@
     },
     mounted(){
       this.$nextTick(() => {
-        equationService.queryByTFCode("RJXX02011901").then(tableData => this.tableData = tableData);
+        equationService.queryByTFCode(1,10,"RJXX02011901").then(tableData => this.tableData = tableData);
       });
     },
     methods: {
