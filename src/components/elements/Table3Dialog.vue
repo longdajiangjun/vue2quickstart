@@ -37,13 +37,10 @@
   import equationService from '../../api/equationService'
 
   export default {
-    props:{
-      dialogTableVisible : Boolean
-    },
     data() {
       return {
         tableData: [],
-        isVisible : this.dialogTableVisible,
+        isVisible : true,
         singleSelection: {}
       }
     },
