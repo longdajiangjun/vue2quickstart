@@ -10,7 +10,7 @@
     <li><router-link :to="{ path: '/table2', activeClass: 'onactive'}" >Table Service</router-link></li>
     <li><router-link :to="{ path: '/table3', activeClass: 'onactive'}" >Table Dialog for element</router-link></li>
     <li><router-link :to="{ path: '/checkbox', activeClass: 'onactive'}" >Checkbox</router-link></li>
-    <li><router-link :to="{ path: '/dialogIndex', activeClass: 'onactive'}" >Table Dialog for bootstrap</router-link></li>
+    <li><router-link :to="{ path: '/dialogIndex', activeClass: 'onactive'}" >Table Dialog for custom</router-link></li>
     <div class="container">
       <router-view></router-view>
     </div>
