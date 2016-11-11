@@ -36,9 +36,8 @@
     },
     methods: {
       handleCurrentChange(val) {
-        let curPag = `${val}`;
 //        console.log(`当前页curPag: `, curPag);
-        this.$emit('changeCurPage',curPag)
+        this.$emit('changeCurPage',val)
       }
     }
   }
