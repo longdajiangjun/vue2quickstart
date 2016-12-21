@@ -1,6 +1,6 @@
 <template>
   <div class="dialogs">
-    <div class="dialog" v-bind:class="{ 'dialog-active': show }">
+    <div class="dialog" v-bind:class="{ 'dialog-active': show }" @open="openDialog">
       <div class="dialog-content">
         <header class="dialog-header">
           <h1 class="dialog-title">{{ title }}</h1>
@@ -45,6 +45,9 @@
      */
     props: ['mode', 'title', 'fields', 'item'],
     methods: {
+      openDialog(){
+
+      },
       close: function() {
         this.show = false
       },

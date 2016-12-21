@@ -4,6 +4,9 @@
       Foo
     </p>
     <a @click="login">click me, then send user to hello</a>
+    <p>
+      <router-link :to="{ path: '/hello', query: { plan: 'private' }}">Register</router-link>
+    </p>
   </div>
 </template>
 
