@@ -15,8 +15,14 @@
       }
     },
     mounted() {
+      console.log("plan=",this.$route.query.plan );
       this.user = this.$store.getters.getCurrentUser;
       console.log("d=",this.user);
+    },
+    watch: {
+      '$route' (to, from) {
+        // 对路由变化作出响应...
+      }
     }
   }
 </script>
